@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Washoe Admin</title>
+    
+    <!-- External Libraries (Tailwind CSS & Fonts) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2948",
+              "primary-light": "#15426d",
+              "primary-lighter": "#3d5a80",
+              accent: "#38bdf8",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+              "background-card": "#1a2633",
+              surface: "#1a242f",
+              "surface-darker": "#151e29",
+              "status-paid": "#10b981",
+              "status-unpaid": "#ef4444",
+              "status-process": "#3b82f6",
+              "status-pending": "#f59e0b",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased min-h-screen flex flex-col">
+
+    <!-- Main App Container (Content injected by JS) -->
+    <div id="app" class="flex-1 w-full max-w-7xl mx-auto w-full relative pb-24 sm:pb-0 transition-all duration-300"></div>
+
+    <!-- Bottom Navigation Container -->
+    <div id="bottom-nav-container" class="fixed bottom-0 z-40 w-full sm:sticky sm:bottom-0"></div>
+
+    <!-- Overlay/Modal Container -->
+    <div id="overlay-container"></div>
+
+    <!-- Main Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
